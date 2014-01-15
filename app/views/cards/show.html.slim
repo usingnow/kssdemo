@@ -1,0 +1,13 @@
+p#notice = notice
+
+p 
+  strong Number:
+  = @card.number
+
+p 
+  strong Status:
+  = @card.status
+
+= link_to 'Edit', edit_card_path(@card)
+'|
+= link_to 'Back', cards_path 
