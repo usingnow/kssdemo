@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @user.gender %>
+</p>
+
+<p>
+  <strong>Mobile:</strong>
+  <%= @user.mobile %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+<p>
+  <strong>Card:</strong>
+  <%= @user.card_id %>
+</p>
+
+<p>
+  <strong>Credit:</strong>
+  <%= @user.credit %>
+</p>
+
+<p>
+  <strong>Identity:</strong>
+  <%= @user.identity_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>

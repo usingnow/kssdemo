@@ -1,4 +1,8 @@
 Koosushi::Application.routes.draw do
+  resources :users
+
+  resources :identities
+
   resources :cards
 
   # The priority is based upon order of creation: first created -> highest priority.
