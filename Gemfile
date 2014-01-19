@@ -19,6 +19,9 @@ group :assets do
   gem 'therubyracer'
   gem 'less-rails'
   gem 'slim'
+
+  #To generate slim file automatically when running scaffolding 
+  gem 'slim-rails' 
 end
 
 gem 'jquery-rails'
@@ -30,7 +33,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.0.1'
 
 # To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'bcrypt-ruby', '~> 3.1.2'
 
 # Use unicorn as the app server
 # gem 'unicorn'
@@ -42,4 +45,4 @@ gem 'jbuilder', '~> 1.0.1'
 # gem 'debugger'
 
 gem 'simple_form'
-gem 'scaffold_cn'
+gem 'scaffold_cn' #To generate slim template
