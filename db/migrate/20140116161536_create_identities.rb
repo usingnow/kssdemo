@@ -2,7 +2,7 @@ class CreateIdentities < ActiveRecord::Migration
   def change
     create_table :identities do |t|
       t.string :name
-      t.digest :password
+      t.string :password_digest
 
       t.timestamps
     end

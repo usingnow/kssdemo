@@ -11,11 +11,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140113185051) do
+ActiveRecord::Schema.define(version: 20140116161844) do
 
   create_table "cards", force: true do |t|
     t.string   "number"
     t.boolean  "status",     limit: 255
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "identities", force: true do |t|
+    t.string   "name"
+    t.string   "password_digest"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", force: true do |t|
+    t.string   "name"
+    t.string   "gender"
+    t.string   "mobile"
+    t.string   "email"
+    t.integer  "card_id"
+    t.integer  "credit"
+    t.integer  "identity_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
