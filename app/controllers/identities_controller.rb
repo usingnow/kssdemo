@@ -4,7 +4,7 @@ class IdentitiesController < ApplicationController
   # GET /identities
   # GET /identities.json
   def index
-    @identities = Identity.all
+    @identities = Identity.order(:name)
   end
 
   # GET /identities/1
@@ -28,7 +28,7 @@ class IdentitiesController < ApplicationController
 
     respond_to do |format|
       if @identity.save
-        format.html { redirect_to @identity, notice: 'Identity was successfully created.' }
+        format.html { redirect_to identities_url, notice: "Identity #{@identity.name} was successfully created." }
         format.json { render action: 'show', status: :created, location: @identity }
       else
         format.html { render action: 'new' }
@@ -42,7 +42,7 @@ class IdentitiesController < ApplicationController
   def update
     respond_to do |format|
       if @identity.update(identity_params)
-        format.html { redirect_to @identity, notice: 'Identity was successfully updated.' }
+        format.html { redirect_to identities_url, notice: "Identity #{@identity.name}was successfully updated." }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
@@ -69,6 +69,6 @@ class IdentitiesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def identity_params
-      params.require(:identity).permit(:name, :password)
+      params.require(:identity).permit(:name, :password, :password_confirmation)
     end
 end

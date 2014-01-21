@@ -1,0 +1,13 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @identity.name
+
+  strong Password:
+  = @identity.password
+
+
+= link_to 'Edit', edit_identity_path(@identity)
+'|
+= link_to 'Back', identities_path
