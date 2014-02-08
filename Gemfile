@@ -45,4 +45,4 @@ gem 'bcrypt-ruby', '~> 3.1.2'
 # gem 'debugger'
 
 gem 'simple_form'
-gem 'scaffold_cn' #To generate slim template
+#gem 'scaffold_cn' #To generate slim template - removed
