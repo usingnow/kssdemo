@@ -1,0 +1,12 @@
+= simple_form_for(@product) do |f|
+  = f.error_notification
+
+  .inputs
+    = f.input :name
+    = f.input :description
+    = f.input :list_price
+    = f.input :member_price
+    = f.input :category
+  
+  .actions
+    = f.button :submit

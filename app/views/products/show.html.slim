@@ -1,0 +1,21 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @product.name
+p
+  strong Description:
+  = @product.description
+p
+  strong List price:
+  = @product.list_price
+p
+  strong Member price:
+  = @product.member_price
+p
+  strong Category:
+  = @product.category
+
+= link_to 'Edit', edit_product_path(@product)
+'|
+= link_to 'Back', products_path
