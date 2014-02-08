@@ -18,10 +18,10 @@ class IdentitiesControllerTest < ActionController::TestCase
 
   test "should create identity" do
     assert_difference('Identity.count') do
-      post :create, identity: { name: @identity.name, password: @identity.password }
+      post :create, identity: { name: 'sam', password: '1qaz2wsx', password_confirmation: '1qaz2wsx' }
     end
 
-    assert_redirected_to identity_path(assigns(:identity))
+    assert_redirected_to identities_path
   end
 
   test "should show identity" do
@@ -35,8 +35,8 @@ class IdentitiesControllerTest < ActionController::TestCase
   end
 
   test "should update identity" do
-    patch :update, id: @identity, identity: { name: @identity.name, password: @identity.password }
-    assert_redirected_to identity_path(assigns(:identity))
+    patch :update, id: @identity, identity: { name: @identity.name, password: @identity.password_digest, password_confirmation: @identity.password_digest }
+    assert_redirected_to identities_url
   end
 
   test "should destroy identity" do
