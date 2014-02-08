@@ -23,8 +23,8 @@ ActiveRecord::Schema.define(version: 20140208092429) do
   create_table "products", force: true do |t|
     t.string   "name"
     t.text     "description"
-    t.decimal  "list_price"  
-    t.decimal  "member_price"
+    t.decimal  "list_price",   precision: 8, scale: 2
+    t.decimal  "member_price", precision: 8, scale: 2
     t.string   "category"
     t.datetime "created_at"
     t.datetime "updated_at"
