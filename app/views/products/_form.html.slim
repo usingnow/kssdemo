@@ -1,4 +1,4 @@
-= simple_form_for(@product) do |f|
+= simple_form_for @product, :html => { :multipart => true } do |f|
   = f.error_notification
 
   .inputs
@@ -7,6 +7,7 @@
     = f.input :list_price
     = f.input :member_price
     = f.input :category
+    = f.input :photo
   
   .actions
     = f.button :submit

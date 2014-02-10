@@ -46,3 +46,4 @@ gem 'bcrypt-ruby', '~> 3.1.2'
 
 gem 'simple_form'
 #gem 'scaffold_cn' #To generate slim template - removed
+gem 'paperclip', '~> 4.1'
